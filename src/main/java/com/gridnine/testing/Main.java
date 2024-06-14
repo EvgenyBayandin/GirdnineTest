@@ -22,5 +22,11 @@ public class Main {
         filteredFlights = departureAfterArrivalFilter.filterFlights(flights);
         filteredFlights.forEach(System.out::println);
 
+        // Flights after filtering out flights with total ground time exceeding 2 hours:
+        FlightFilter longGroundTimeFilter  = new LongGroundTimeFilter();
+        System.out.println("\nFlights after filtering out flights with total ground time exceeding 2 hours:");
+        filteredFlights = longGroundTimeFilter.filterFlights(flights);
+        filteredFlights.forEach(System.out::println);
+
     }
 }
