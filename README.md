@@ -1,4 +1,4 @@
-# GrdnineTest
+# GridnineTest
 Тестовое задание, фильтрация полетных сегментов
 
 All flights: 
