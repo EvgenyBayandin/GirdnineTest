@@ -16,5 +16,11 @@ public class Main {
         List<Flight> filteredFlights= departureBeforeCurrentTimeFilter.filterFlights(flights);
         filteredFlights.forEach(System.out::println);
 
+        // Flights after filtering out flights with segments where arrival is after departure:
+        FlightFilter departureAfterArrivalFilter  = new DepartureAfterArrivalFilter();
+        System.out.println("\nFlights after filtering out flights with segments where arrival is before departure:");
+        filteredFlights = departureAfterArrivalFilter.filterFlights(flights);
+        filteredFlights.forEach(System.out::println);
+
     }
 }
